@@ -6,20 +6,23 @@
     border-radius: 10px;
     padding: 50px 30px 50px 30px;
 
-    @media screen and (min-width: 768px) {
-        flex-direction: row;
+    @media screen and (max-width: 467px) {
+        flex-direction: column-reverse;
         background: #262d33;
-        border-radius: 10px;
+    }
+    @media screen and (min-width: 468px) {
+        flex-direction: row;
+        margin-bottom: 25px;
+    }
+    @media screen and (min-width: 1024px) {
+        flex-direction: row;
+        margin-bottom: 35px;
     }
 
     &__info {
         max-width: 500px;
         text-align: center;
         margin-right: 20px;
-
-        @media screen and (min-width: 768px) {
-            background: red;
-        }
     }
 
     &__title {
@@ -30,7 +33,13 @@
         line-height: 15px;
         text-transform: uppercase;
         margin-bottom: 10px;
+        margin-top: 10px;
+
+        @media screen and(max-width: 468px) {
+            color: #939699;
+        }
     }
+
     &__description {
         color: #ffffff;
         font-style: normal;
@@ -44,6 +53,10 @@
         border-radius: 50%;
         overflow: hidden;
         min-width: 254px;
+
+        @media screen and (max-width: 468px) {
+            background: rgba(147, 150, 153, 0.5);
+        }
 
         img {
             width: 100%;
